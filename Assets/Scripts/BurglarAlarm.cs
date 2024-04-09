@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BurglarAlarm : MonoBehaviour
@@ -7,20 +8,23 @@ public class BurglarAlarm : MonoBehaviour
     private readonly int MinVolume = 0;
     private readonly int MaxVolume = 1;
 
-    private int _targetVolume;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Activate()
     {
-        _targetVolume = MaxVolume;
+        StartCoroutine(ChangeVolume(MaxVolume));
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void Deactivate()
     {
-        _targetVolume = MinVolume;
+        StartCoroutine(ChangeVolume(MinVolume));
     }
 
-    private void Update()
+    private IEnumerator ChangeVolume(int targetVolume)
     {
-        _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, _targetVolume, Time.deltaTime);
+        while (_audioSource.volume != targetVolume)
+        {
+            _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, targetVolume, Time.deltaTime);
+
+            yield return null;
+        }
     }
 }

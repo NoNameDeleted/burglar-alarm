@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 931965601}
   - component: {fileID: 931965602}
   - component: {fileID: 931965603}
+  - component: {fileID: 931965604}
   m_Layer: 0
   m_Name: Crook
   m_TagString: Untagged
@@ -377,6 +378,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &931965604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931965598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6694333a56968428b3adc5dc578c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1164742725
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,6 +403,7 @@ GameObject:
   - component: {fileID: 1164742726}
   - component: {fileID: 1164742729}
   - component: {fileID: 1164742730}
+  - component: {fileID: 1164742731}
   m_Layer: 0
   m_Name: House
   m_TagString: Untagged
@@ -618,6 +632,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1164742726}
+--- !u!114 &1164742731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164742725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5572e0d8abb65574dbb0e6d78e25ee7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alarm: {fileID: 1164742730}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
